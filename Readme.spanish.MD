@@ -65,3 +65,81 @@ Misión
 La misión de Betty es proporcionar una manera de utilizar las computadoras a través de la entrada de lenguaje natural.
 
 Específicamente, el beneficio es poder hacer cosas en su computadora sin salir de la línea de comandos o enredarse en Internet tratando de encontrar el comando correcto. Betty sólo funciona.
+
+Contar
+cuantas palabras hay en este directorio
+betty cuantos caracteres hay en myfile.py
+betty cuenta las líneas en esta carpeta
+(Tenga en cuenta que hay muchas maneras de decir más o menos lo mismo.)
+
+Configuración
+betty cambia tu nombre a Joe
+betty habla conmigo
+Betty deja de hablarme
+
+Fecha y hora
+betty que hora es
+betty que es la cita de hoy
+betty que mes es
+betty que es hoy
+
+Encontrar
+betty me encuentra todos los archivos que contienen california
+
+Internet
+descargar betty http://www.mysite.com/something.tar.gz to something.tar.gz
+betty descomprimir algo.tar.gz
+betty desarchar algo.tar.gz a somedir
+(Puede descomprimir, desarchivar, descomprimir, descomprimir y expandir de forma intercambiable.)
+betty comprime / ruta / a / dir
+
+iTunes
+betty mute itunes
+betty unmute itunes
+betty pausa la musica
+betty resume itunes
+Betty detener mi música
+betty siguiente canción
+betty prev track
+betty qué canción está tocando
+(Tenga en cuenta que las palabras canción, pista, música, etc. son intercambiables)
+
+Divertido
+Betty se vuelve loca
+betty cuál es el significado de la vida
+... y más que se dejan para que usted descubra!
+
+Mapa
+betty mostrarme un mapa de vista a la montaña
+
+Meta
+betty qué versión es usted (o simplemente la versión de betty)
+betty cuál es tu github de nuevo
+
+Permisos
+betty me da permiso para este directorio
+betty le da a otro usuario la propiedad de myfile.txt
+
+Proceso
+betty mostrarme todos los procesos por root conteniendo grep
+betty mostrarme todos mis procesos que contienen netbio
+
+Tamaños
+betty muestra el tamaño de myfile.txt
+
+Spotify
+betty juego spotify
+betty pause spotify
+betty siguiente spotify
+betty anterior spotify
+
+Usuario
+betty cuál es mi nombre de usuario
+betty cuál es mi verdadero nombre
+betty cuál es mi dirección ip
+betty quién está conectado
+betty cuál es mi versión de ruby
+
+Consultas web
+betty turn web en
+betty por favor cuéntame cómo está el clima en Londres
