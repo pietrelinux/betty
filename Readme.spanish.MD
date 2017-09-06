@@ -59,3 +59,9 @@ Betty: Introduzca el número del comando que desea que ejecute uno, o N (no) si 
 > 2
 Betty: Running finger `whoami` | sed 's/.*: *//;q'
 Jeff Pickhardt
+
+Misión
+
+La misión de Betty es proporcionar una manera de utilizar las computadoras a través de la entrada de lenguaje natural.
+
+Específicamente, el beneficio es poder hacer cosas en su computadora sin salir de la línea de comandos o enredarse en Internet tratando de encontrar el comando correcto. Betty sólo funciona.
