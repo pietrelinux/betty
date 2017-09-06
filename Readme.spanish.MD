@@ -30,3 +30,32 @@ Automáticamente:
 En primer lugar, git clonar este repo con git clone https://github.com/pickhardt/betty
 Ejecute ruby install.rb in betty/.
 ¡Utilícelo! Por ejemplo, puede ejecutar comandos: betty cuantas palabras hay en este directorio o betty descomprime algo.tar.gz
+
+Ejemplos:
+
+
+Dar entrada de lenguaje natural Betty, por ejemplo " betty cuál es mi nombre de usuario ", y ella responde de la manera más apropiada.
+
+> betty cuál es mi nombre de usuario
+Betty: Corriendo whoami
+jrp
+
+> betty cuál es mi verdadero nombre
+Betty: Corriendo `whoami` | sed 's/.*: *//;q'
+Jeff Pickhardt
+
+
+Si hay más de una forma en que Betty podría responder, ella le pedirá que seleccione la que desea.
+
+
+> betty cuál es mi nombre
+Betty: OK, tengo varias maneras de responder.
+Betty: Introduzca el número del comando que desea que ejecute uno, o N (no) si no desea que ejecute ninguna.
+
+[1] whoami
+   Obtiene el nombre de usuario del sistema.
+[2] finger `whoami` | sed 's/.*: *//;q'
+    Obtiene su nombre completo.
+> 2
+Betty: Running finger `whoami` | sed 's/.*: *//;q'
+Jeff Pickhardt
