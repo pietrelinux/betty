@@ -143,3 +143,16 @@ betty cuál es mi versión de ruby
 Consultas web
 betty turn web en
 betty por favor cuéntame cómo está el clima en Londres
+
+
+Contribuyendo
+
+¡Las contribuciones son bienvenidas! Si desea contribuir, emita una solicitud 
+de extracción en la rama de dev, no en la rama principal.
+
+Asegúrese de que utiliza pestañas suaves, convirtiendo pestañas en espacios. 
+No utilice caracteres de pestaña reales porque hará que el espaciado parezca extraño en los editores de texto de otros.
+
+Por favor asegúrese de que las pruebas pasen y trate de escribir pruebas para sus 
+contribuciones. Para comprobar las pruebas, ejecute por primera vez el paquete de 
+instalación seguido por el paquete de rspec spec exec
