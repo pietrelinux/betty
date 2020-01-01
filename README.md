@@ -2,45 +2,42 @@ Betty (version 0.1.8)
 =====================
 ![circle ci build](https://circleci.com/gh/pickhardt/betty/tree/dev.png)
 
-Betty is a friendly English-like interface for your command line.
 
-She translates English-like phrases into commands in case you ever run into situations [like this][xkcd].
+Betty es una interfaz amigable similar al inglés para su línea de comando.
 
-[xkcd]:http://xkcd.com/1168/
+Ella traduce frases similares al inglés en comandos en caso de que alguna vez te encuentres en situaciones como esta.
 
-This means you don't have to leave your command line to look up an obscure but useful command. Just ask Betty!
+Esto significa que no tiene que abandonar su línea de comando para buscar un comando oscuro pero útil. ¡Solo pregúntale a Betty!
 
-NOTE: While I do not have the time to actively maintain Betty anymore, it is perfectly functional, and I am open to new maintainers taking the lead. If you would be interested, contact me at pickhardt (at) gmail (dot) com.
 
-By Analogy
+Por analogia
+
 ----------
 
-iPhone users: it's like Siri for the command line.
+Es como el asistente de siri, alexa de amzon o cortana de microsoft windows 10
 
-Android users: it's like Google Voice Search for the command line. (What's Google Voice Search? It's that thing you talk to that does stuff.)
-
-
-Set Up
+Instalación
 ------
 
-Manually:
+Manualmente
 
-1. First, git clone this repo with `git clone https://github.com/pickhardt/betty`
-2. Add the following alias to your ~/.bashrc
+1. Primero clona este repositorio `git clone https://github.com/pietrelinux/betty`
+2. ade el siguiente alias en tu archivo ~/.bashrc
 ```alias betty="~/path/to/betty/main.rb"```
-3. Use it! For instance, you can run commands: "betty how many words are in this directory" or "betty uncompress something.tar.gz"
+3. Úsalo! Por ejemplo, puede ejecutar comandos: "Betty cuántas palabras hay en este directorio" o "Betty descomprime
+algo.tar.gz"
 
-Automatically:
+Automaticamente
+1. Primero clona este repositorio `git clone https://github.com/pickhardt/betty`
+2. Ejecuta `ruby install.rb` en `betty/`.
+3. Úsalo!
 
-1. First, git clone this repo with `git clone https://github.com/pickhardt/betty`
-2. Run `ruby install.rb` in `betty/`.
-3. Use it! For instance, you can run commands: `betty how many words are in this directory` or `betty uncompress something.tar.gz`
 
-
-Examples
+Ejemplos
 --------
 
-Give Betty natural language input, for instance `betty whats my username`, and she'll respond in the most appropriate way.
+Brinde a Betty información en lenguaje natural, por ejemplo`betty cual es mi nombre  de ususario`,
+y ella responderá de la manera más adecuada.
 
     > betty whats my username
     Betty: Running whoami
@@ -50,9 +47,9 @@ Give Betty natural language input, for instance `betty whats my username`, and s
     Betty: Running finger `whoami` | sed 's/.*: *//;q'
     Jeff Pickhardt
 
-If there's more than one way Betty could respond, she'll ask you to select the one you want.
+Si hay más de una forma en que Betty podría responder, le pedirá que seleccione la que desee.
 
-    > betty whats my name
+> betty whats my name
     Betty: Okay, I have multiple ways to respond.
     Betty: Enter the number of the command you want me to run one, or N (no) if you don't want me to run any.
     [1] whoami
