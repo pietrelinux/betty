@@ -1,183 +1,83 @@
-Betty (version 0.1.8)
-=====================
-![circle ci build](https://circleci.com/gh/pickhardt/betty/tree/dev.png)
+Betty es una interfaz amigable para tu línea de comandos.
 
+Traduce frases como frases en inglés en comandos
 
-Betty es una interfaz amigable similar al inglés para su línea de comando.
+Esto significa que no tienes que dejar tu línea de comandos para buscar un comando oscuro pero útil. ¡Pregúntale a Betty!
 
-Ella traduce frases similares al inglés en comandos en caso de que alguna vez te encuentres en situaciones como esta.
-
-Esto significa que no tiene que abandonar su línea de comando para buscar un comando oscuro pero útil. ¡Solo pregúntale a Betty!
-
+NOTA: Aunque no tengo tiempo para mantener activamente Betty, es perfectamente funcional y estoy abierto a que los nuevos mantenedores tomen la iniciativa. Si usted está interesado, póngase en contacto conmigo en pickhardt (at) gmail (punto) com.
 
 Por analogia
 
-----------
+Usuarios de iPhone: es como Siri para la línea de comandos.
 
-Es como el asistente de siri, alexa de amzon o cortana de microsoft windows 10
+Usuarios de Android: es como Google Voice Search para la línea de comandos. (¿Qué es Google Voice Search? Esa es la cosa con la que hablas que hace cosas.)
 
 Instalación
-------
 
-Manualmente
+Manualmente:
 
-1. Primero clona este repositorio `git clone https://github.com/pietrelinux/betty`
-2. ade el siguiente alias en tu archivo ~/.bashrc
-```alias betty="~/path/to/betty/main.rb"```
-3. Úsalo! Por ejemplo, puede ejecutar comandos: "Betty cuántas palabras hay en este directorio" o "Betty descomprime
-algo.tar.gz"
+En primer lugar, git clonar este repo con git clon https://github.com/pickhardt/betty Añade el siguiente alias a tu alias /.bashrc alias betty="/path/to/betty/main.rb" ¡Utilícelo! Por ejemplo, puede ejecutar comandos: "betty cuantas palabras hay en este directorio" o "betty descomprime algo.tar.gz"
 
-Automaticamente
-1. Primero clona este repositorio `git clone https://github.com/pickhardt/betty`
-2. Ejecuta `ruby install.rb` en `betty/`.
-3. Úsalo!
+Automáticamente:
 
+En primer lugar, git clonar este repo con git clone https://github.com/pickhardt/betty Ejecute ruby install.rb in betty/. ¡Utilícelo! Por ejemplo, puede ejecutar comandos: betty cuantas palabras hay en este directorio o betty descomprime algo.tar.gz
 
-Ejemplos
---------
+Ejemplos:
 
-Brinde a Betty información en lenguaje natural, por ejemplo`betty cual es mi nombre  de ususario`,
-y ella responderá de la manera más adecuada.
+Dar entrada de lenguaje natural Betty, por ejemplo " betty cuál es mi nombre de usuario ", y ella responde de la manera más apropiada.
 
-    > betty whats my username
-    Betty: Running whoami
-    jrp
+betty cuál es mi nombre de usuario Betty: Corriendo whoami jrp
 
-    > betty whats my real name
-    Betty: Running finger `whoami` | sed 's/.*: *//;q'
-    Jeff Pickhardt
+betty cuál es mi verdadero nombre Betty: Corriendo whoami | sed 's/.*: *//;q' Jeff Pickhardt
 
-Si hay más de una forma en que Betty podría responder, le pedirá que seleccione la que desee.
+Si hay más de una forma en que Betty podría responder, ella le pedirá que seleccione la que desea.
 
-> betty whats my name
-    Betty: Okay, I have multiple ways to respond.
-    Betty: Enter the number of the command you want me to run one, or N (no) if you don't want me to run any.
-    [1] whoami
-        Gets your system username.
-    [2] finger `whoami` | sed 's/.*: *//;q'
-        Gets your full name.
-    > 2
-    Betty: Running finger `whoami` | sed 's/.*: *//;q'
-    Jeff Pickhardt
+betty cuál es mi nombre Betty: OK, tengo varias maneras de responder. Betty: Introduzca el número del comando que desea que ejecute uno, o N (no) si no desea que ejecute ninguna.
 
+[1] whoami Obtiene el nombre de usuario del sistema. [2] finger whoami | sed 's/.*: *//;q' Obtiene su nombre completo.
 
-Mission
--------
+2 Betty: Running finger whoami | sed 's/.*: *//;q' Jeff Pickhardt
 
-The mission of Betty is to provide a way to use computers through natural language input.
+Misión
 
-Specifically, the benefit is being able to do things on your computer without leaving the command line or screwing around on the internet trying to find the right command. Betty just works.
+La misión de Betty es proporcionar una manera de utilizar las computadoras a través de la entrada de lenguaje natural.
 
+Específicamente, el beneficio es poder hacer cosas en su computadora sin salir de la línea de comandos o enredarse en Internet tratando de encontrar el comando correcto. Betty sólo funciona.
 
-Documentation
--------------
+Contar cuantas palabras hay en este directorio betty cuantos caracteres hay en myfile.py betty cuenta las líneas en esta carpeta (Tenga en cuenta que hay muchas maneras de decir más o menos lo mismo.)
 
-The following is a non-exhaustive list of things you can do:
+Configuración betty cambia tu nombre a Joe betty habla conmigo Betty deja de hablarme
 
-    Count
-    betty how many words are in this directory
-    betty how many characters are in myfile.py
-    betty count lines in this folder
-    (Note that there's many ways to say more or less the same thing.)
+Fecha y hora betty que hora es betty que es la cita de hoy betty que mes es betty que es hoy
 
-    Config
-    betty change your name to Joe
-    betty speak to me
-    betty stop speaking to me
+Encontrar betty me encuentra todos los archivos que contienen california
 
-    Datetime
-    betty what time is it
-    betty what is todays date
-    betty what month is it
-    betty whats today
+Internet descargar betty http://www.mysite.com/something.tar.gz to something.tar.gz betty descomprimir algo.tar.gz betty desarchar algo.tar.gz a somedir (Puede descomprimir, desarchivar, descomprimir, descomprimir y expandir de forma intercambiable.) betty comprime / ruta / a / dir
 
-    Find
-    betty find me all files that contain california
+iTunes betty mute itunes betty unmute itunes betty pausa la musica betty resume itunes Betty detener mi música betty siguiente canción betty prev track betty qué canción está tocando (Tenga en cuenta que las palabras canción, pista, música, etc. son intercambiables)
 
-    Internet
-    betty download http://www.mysite.com/something.tar.gz to something.tar.gz
-    betty uncompress something.tar.gz
-    betty unarchive something.tar.gz to somedir
-    (You can use unzip, unarchive, untar, uncompress, and expand interchangeably.)
-    betty compress /path/to/dir
+Divertido Betty se vuelve loca betty cuál es el significado de la vida ... y más que se dejan para que usted descubra!
 
-    iTunes
-    betty mute itunes
-    betty unmute itunes
-    betty pause the music
-    betty resume itunes
-    betty stop my music
-    betty next song
-    betty prev track
-    betty what song is playing
-    (Note that the words song, track, music, etc. are interchangeable)
+Mapa betty mostrarme un mapa de vista a la montaña
 
-    Fun
-    betty go crazy
-    betty whats the meaning of life
-    ...and more that are left for you to discover!
+Meta betty qué versión es usted (o simplemente la versión de betty) betty cuál es tu github de nuevo
 
-    Map
-    betty show me a map of mountain view
+Permisos betty me da permiso para este directorio betty le da a otro usuario la propiedad de myfile.txt
 
-    Meta
-    betty what version are you (or just betty version)
-    betty whats your github again
+Proceso betty mostrarme todos los procesos por root conteniendo grep betty mostrarme todos mis procesos que contienen netbio
 
-    Permissions
-    betty give me permission to this directory
-    betty give anotheruser ownership of myfile.txt
+Tamaños betty muestra el tamaño de myfile.txt
 
-    Process
-    betty show me all processes by root containing grep
-    betty show me all my processes containing netbio
+Spotify betty juego spotify betty pause spotify betty siguiente spotify betty anterior spotify
 
-    Sizes
-    betty show size for myfile.txt
+Usuario betty cuál es mi nombre de usuario betty cuál es mi verdadero nombre betty cuál es mi dirección ip betty quién está conectado betty cuál es mi versión de ruby
 
-    Spotify
-    betty play spotify
-    betty pause spotify
-    betty next spotify
-    betty previous spotify
+Consultas web betty turn web en betty por favor cuéntame cómo está el clima en Londres
 
-    User
-    betty whats my username
-    betty whats my real name
-    betty whats my ip address
-    betty who else is logged in
-    betty whats my version of ruby
+Contribuyendo
 
-	Web queries
-	betty turn web on
-	betty please tell me what is the weather like in London
+¡Las contribuciones son bienvenidas! Si desea contribuir, emita una solicitud de extracción en la rama de dev, no en la rama principal.
 
-Contributing
-------------
+Asegúrese de que utiliza pestañas suaves, convirtiendo pestañas en espacios. No utilice caracteres de pestaña reales porque hará que el espaciado parezca extraño en los editores de texto de otros.
 
-Contributions are welcome! If you would like to contribute, please issue a pull request against the **dev branch**, not the master branch.
-
-Please ensure that you use soft tabs, converting tabs to spaces. Do not use actual tab characters because it will make the spacing look weird in others' text editors.
-
-Please make sure that the tests pass and try to write tests for your contributions. To check the tests, first run `bundle install` followed by `bundle exec rspec spec`
-
-
-Maintainers Wanted
-------------------
-
-While I do not have the time to actively maintain Betty anymore, it is a cool concept and I'm open to someone else taking the lead. If you would like to become a maintainer, contact me at pickhardt (at) gmail (dot) com.
-
-
-Versioning
-----------
-
-Releases will follow a semantic versioning format:
-
-`<major>.<minor>.<patch>`
-
-For more information on SemVer, visit [http://semver.org/](http://semver.org/).
-
-License
--------
-
-Released under the Apache License 2.0. Related link: www.apache.org/licenses/LICENSE-2.0.html
+Por favor asegúrese de que las pruebas pasen y trate de escribir pruebas para sus contribuciones. Para comprobar las pruebas, ejecute por primera vez el paquete de instalación seguido por el paquete de rspec spec exec
