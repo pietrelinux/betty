@@ -10,7 +10,7 @@ Dir[File.dirname(__FILE__) + '/lib/*.rb'].each {|file|
   begin
     require file
   rescue Exception => e
-    puts "Module #{file} could not be loaded because of #{e.message.split('\n')[0]}"
+    puts "Modulo #{file} no se pudo cargar debido a #{e.message.split('\n')[0]}"
   end
 }
 
@@ -29,21 +29,20 @@ def get_input_integer(min, max, options={})
       return input_integer
     end
 
-    say "
-Lo sentimos, ingrese un número entero entre #{ min } y #{ max }#{ options[:allow_no] ? ', o N para no' : '' }."
+    say "Lo sentimos, ingrese un número entero entre #{ min } y #{ max }#{ options[:allow_no] ? ', o N para no' : '' }."
   end
 end
 
 def get_input_y_n
   while true
     case STDIN.gets.strip.downcase
-      when 'y', 'yes'
+      when 's', 'si'
         return true
       when 'n', 'no'
         return false
     end
 
-    say "Sorry, please enter Y for Yes or N for No."
+    say "Lo sentimos, ingrese s para Sí o n para No."
   end
 end
 
@@ -62,7 +61,7 @@ end
 def help(command)
   # betty --help find
   # betty I need help with the find command
-  command = command.sub("I need","").sub("help","").sub("me","").sub("with","").sub("the","").sub("command","").sub("--","").strip
+  command = command.sub("I need|Necesito|necesito","").sub("help|ayuda|Ayudame|ayudame","").sub("with|con","").sub("the|el","").sub("command|comando","").sub("--","").strip
   responses = []
   $executors.each do |executor|
     responses = responses.concat(executor.help)
@@ -71,18 +70,18 @@ def help(command)
     command = command.strip
     response = responses.detect{|h| h[:category].downcase == "#{ command.split.first.downcase }"}
     if response
-      say "I can do that if you help me. Check out the following examples"
+      say "Puedo hacer eso si me ayudas. Mira los siguientes ejemplos"
       # say "#{ response[:usage] }", :no_name => true
       response[:usage].each do |usage|
         say usage, :no_name => true
       end
-      say "Please note: I am case sensitive. Watch out for my feelings...", :no_name => true
+      say "Tenga en cuenta: soy sensible a mayúsculas y minúsculas. Cuidado con mis sentimientos ...", :no_name => true
     else
-      say "I don't understand. Hopefully someone will make a pull request so that one day I will understand."
+      say "No te entiendo, pero puedes hacer una peticion de mejora para que algun dia pueda entenderte"
       #puts "I do know how to\n" + responses.map{|x| x[:category] + ":\t\t" + x[:usage].sample }.join("\n")
     end
   else
-    say "What can I help you with?"
+    say "Hola! En que puedo ayudarte?"
   end
 end
 
@@ -228,9 +227,9 @@ def main(commands)
   if responses.length == 1
     response = responses[0]
     if response[:ask_first]
-      say "I found the command '#{ responses[0][:command] }'"
+      say "Encontré el comando'#{ responses[0][:command] }'"
       say "       #{ responses[0][:explanation] }", :no_name => true
-      say "Do you want me to run this? Y/n"
+      say "¿Quieres que haga esto? S/n"
       if get_input_y_n
         run(response)
       end
@@ -238,8 +237,8 @@ def main(commands)
       run(response)
     end
   elsif responses.length > 1
-    say "Okay, I have multiple ways to respond."
-    say "Enter the number of the command you want me to run, or N (no) if you don't want me to run any."
+    say "De acuerdo, tengo múltiples formas de responder."
+    say "Ingrese el número del comando que desea que ejecute, o N (no) si no desea que ejecute ninguno."
     responses.each_with_index do |response, index|
       say "[#{ index + 1 }] #{ response[:command] }", :no_name => true
       say("    #{ response[:explanation] }", :no_name => true) if response[:explanation]
