@@ -29,7 +29,8 @@ def get_input_integer(min, max, options={})
       return input_integer
     end
 
-    say "Sorry, please enter an integer between #{ min } and #{ max }#{ options[:allow_no] ? ', or N for no' : '' }."
+    say "
+Lo sentimos, ingrese un número entero entre #{ min } y #{ max }#{ options[:allow_no] ? ', o N para no' : '' }."
   end
 end
 
